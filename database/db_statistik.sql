@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Jan 2023 pada 11.44
+-- Waktu pembuatan: 05 Jan 2023 pada 14.08
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 8.1.6
 
@@ -155,7 +155,7 @@ CREATE TABLE `personal_access_tokens` (
 
 CREATE TABLE `posts` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT 2,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `slug` int(11) NOT NULL,
   `description` int(11) NOT NULL,
@@ -173,7 +173,9 @@ CREATE TABLE `posts` (
 INSERT INTO `posts` (`id`, `user_id`, `title`, `slug`, `description`, `featured_image`, `is_active`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (20024, 2, 'I Gede Gelgel Abdiutama', 2115101014, 98, NULL, 1, '2023-01-04 02:24:44', '2023-01-04 02:24:44', NULL),
 (20025, 2, 'David Mario', 2115101055, 100, NULL, 1, '2023-01-04 02:25:03', '2023-01-04 02:25:03', NULL),
-(20026, 2, 'Risva', 2115101066, 99, NULL, 1, '2023-01-04 02:25:26', '2023-01-04 02:26:49', NULL);
+(20026, 2, 'Risva', 2115101066, 99, NULL, 1, '2023-01-04 02:25:26', '2023-01-04 02:26:49', NULL),
+(20027, 2, 'Wibisana', 12345678, 80, NULL, 1, '2023-01-04 03:18:55', '2023-01-04 03:18:55', NULL),
+(20028, 2, 'Bakti', 2115101026, 90, NULL, 1, '2023-01-04 03:19:56', '2023-01-04 03:19:56', NULL);
 
 -- --------------------------------------------------------
 
@@ -238,7 +240,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'User', 'user@gmail.com', '2023-01-02 01:28:32', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'l68tsSG5qIosdHI8wJPYEezQWixikUTEOkCK4hf1C3Ef5NhmUPJVv8zRNS2G', '2023-01-02 01:28:32', '2023-01-02 01:28:32'),
-(2, 'Admin', 'admin@gmail.com', '2023-01-02 01:28:32', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'SkoAay5OYL5fwlPlPvownk3aTD6OBzGBw9qqjmaNV5fMhy6iHVAG8xHD3NGe', '2023-01-02 01:28:32', '2023-01-02 01:28:32'),
+(2, 'Admin', 'admin@gmail.com', '2023-01-02 01:28:32', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'njqT7R96mdRWGqPqrpZhR5a079OgCZjS3g65bz68eTXCOHBrtefOQCLbsnwo', '2023-01-02 01:28:32', '2023-01-02 01:28:32'),
 (103, 'I Gede Gelgel Abdiutama', 'abdiutama02@gmail.com', NULL, '$2y$10$BZwBFLyKlommfE.cFAEVM.XiRv3zZnIQbNcKxIJe7J2yPb77klL2W', NULL, '2023-01-02 22:14:19', '2023-01-02 22:14:19');
 
 --
@@ -353,7 +355,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20027;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20041;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`

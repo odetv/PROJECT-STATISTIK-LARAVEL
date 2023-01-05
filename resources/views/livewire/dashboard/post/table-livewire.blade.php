@@ -2,9 +2,42 @@
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 inline-block w-full sm:px-6 lg:px-8">
             <div class="overflow-hidden">
+                <h2 class="ml-2 mb-6 font-semibold text-xl text-gray-800 leading-tight">
+                    {{-- {{ __('Buat Data') }} --}}
+                    Buat Data
+                </h2>
+                <div class="flex flex-col justify-between lg:flex-row md:flex-row sm:flex-row">
+                    <div class="flex flex-row">
+                        <div class="flex ml-2 mt-2">
+                        <x-button sky href="{{ route('posts.create') }}" label="Create" />
+                        </div>
+                        <form action="{{ route('user.import') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="flex ml-2 mt-2">
+                                    <x-button sky type="submit" label="Import" />
+                                    <input class="ml-2 form-control form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="formFileSm" name="file" type="file">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="flex flex-row items-center justify-end">
 
-                <div class="flex ml-2 mt-2">
-                    <x-button sky href="{{ route('posts.create') }}" label="Create" />
+                        <form action="{{ route('user.exportExcel') }}" method="GET" enctype="multipart/form-data">
+                            @csrf
+                            <div class="flex flex-row">
+                                <div class="flex mt-2">
+                                    <x-button dark type="submit" label="Export Excel" />
+                                </div>
+                            </div>
+                        </form>
+                        <form action="{{ route('user.exportCsv') }}" method="GET" enctype="multipart/form-data">
+                            @csrf
+                            <div class="flex flex-row">
+                                <div class="flex ml-2 lg:mr-2 md:mr-2 sm:mr-2 mt-2">
+                                    <x-button dark type="submit" label="Export CSV" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <div class="flex justify-between h-16 mt-6 p-2">
@@ -215,8 +248,8 @@
                                     {{ $post->updated_at }}
                                 </td>
                                 <td class="text-center text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                    <x-button href="{{ route('posts.edit', $post->id) }}" warning label="Edit" />
-                                    <x-button negative label="Delete" wire:click="confirmDestroy({{ $post->id }})" />
+                                    <x-button href="{{ route('posts.edit', $post->id) }}" green label="Edit" />
+                                    <x-button red label="Delete" wire:click="confirmDestroy({{ $post->id }})" />
                                 </td>
                             </tr class="bg-white border-b">
                             @empty

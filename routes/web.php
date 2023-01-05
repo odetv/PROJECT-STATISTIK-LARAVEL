@@ -17,6 +17,11 @@ use App\Http\Controllers\Dashboard\PostController;
 */
 
 Route::get('/', [IndexController::class, 'index']);
+
+Route::post('user-import', [PostController::class, 'import'])->name('user.import');
+Route::get('user-exportExcel', [PostController::class, 'exportExcel'])->name('user.exportExcel');
+Route::get('user-exportCsv', [PostController::class, 'exportCsv'])->name('user.exportCsv');
+
 // Route::get('/', function () {
 //     $total      = Post::count();
 //     $mean       = number_format(Post::avg('description'), 1, ',');
