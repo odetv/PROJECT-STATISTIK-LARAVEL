@@ -1,55 +1,16 @@
-<div id="top"></div>
+### PROJECT MATAKULIAH STATISTIK
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#credentials">Credentials</a></li>
-  </ol>
-</details>
+![Metrics](https://metrics.lecoq.io/odetv?template=classic&repositories.forks=true&languages=1&languages.colors=github&languages.threshold=0%25&config.timezone=Asia%2FJakarta)
+<a href="https://github.com/odetv"><img src="https://github-readme-stats.vercel.app/api?username=odetv&show_icons=true&theme=radical"></a>
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-This project is created to learn and practice livewire; understand why it is created; and explore the power of LIVEWIRE!
-
-This project consists of Livewire table with sorting, search, perPage, and bulk delete functionalities.
-It is also integrated with Spatie Laravel permissions and Nprogress.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-### Built With
-
-* [Livewire](https://laravel-livewire.com/)
-* [WireUI](https://livewire-wireui.com/)
-* [Spatie Laravel Permission](https://spatie.be/docs/laravel-permission/v5/introduction)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-Follow these steps to try this out on your localhost.
+### Repo Stats 🔭
+![github card](https://github-readme-stats.vercel.app/api/pin/?username=odetv&repo=PROJECT-STATISTIK&theme=dark)
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/bruzp/laravel-livewire.git
+   git clone https://github.com/odetv/PROJECT-STATISTIK-LARAVEL.git
    ```
 2. Run composer install
    ```sh
@@ -83,18 +44,14 @@ Follow these steps to try this out on your localhost.
    php artisan serve
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- CREDENTIALS EXAMPLES -->
-## Credentials
+## Account
 
 Admin <br/>
-username: admin@example.com <br/>
+username: admin@gmail.com <br/>
 password: password <br/>
 
 User <br/>
-username: test@example.com <br/>
+username: test@gmail.com <br/>
 password: password
-
-<p align="right">(<a href="#top">back to top</a>)</p>
